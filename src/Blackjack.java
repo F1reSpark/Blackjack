@@ -198,6 +198,7 @@ public class Blackjack {
         if(gambleBig) {
             switch (kb.nextLine()) {
                 case "Y":
+                    playerMoney -= (betPot/2);
                     betPot *= 2;
                     System.out.println("Current pot: $" + betPot);
                     System.out.println();
@@ -225,7 +226,7 @@ public class Blackjack {
 
                     if (playerValue == dealerValue) {
                         System.out.println("Push!");
-                        playerMoney += betPot/2;
+                        playerMoney += (betPot/2);
                         System.out.println();
                         System.out.println("Current Money: $" + playerMoney);
                     } else if (playerValue > 21) {
@@ -301,7 +302,7 @@ public class Blackjack {
             case "S":
                 if (playerValue == dealerValue){
                     System.out.println("Push!");
-                    playerMoney += betPot/2;
+                    playerMoney += (betPot/2);
                     System.out.println();
                     System.out.println("Current Money: $" + playerMoney);
                 } else if (playerValue == 21){
